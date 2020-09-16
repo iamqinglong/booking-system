@@ -45,7 +45,7 @@ class LoginController extends Controller
         }
 
         if (auth()->user()->hasRole('User')) {
-            return '/user';
+            return '/user/bookings';
         }
 
         return RouteServiceProvider::HOME;
