@@ -176,8 +176,7 @@ const app = new Vue({
             await this.getSuggestedScheduleRemarks()
             await this.getAllBookings()
             this.id = window.location.pathname.split("/").pop()
-            if (this.$refs.table && this.id) {
-                console.log('object')
+            if (this.$refs.table && this.id && Number.isInteger(this.id)) {
                 this.$refs.table.setFilter(this.id)
             }
        },

@@ -43,6 +43,11 @@ class LoginController extends Controller
         if (auth()->user()->hasRole('Admin')) {
             return '/admin';
         }
+
+        if (auth()->user()->hasRole('User')) {
+            return '/user';
+        }
+
         return RouteServiceProvider::HOME;
     }
 }
